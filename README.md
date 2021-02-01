@@ -57,6 +57,12 @@ Once those have completed then log out and log back in again (remember to have X
 
 ![](imgs/1.png)
 
+Make sure you can select the correct board in the Arduino IDE. Go to:
+
+```
+Tools -> Boards -> ESP32 Arduino -> TinyPico
+```
+
 -----------------------------------------
 
 And you should now be ready to go!
