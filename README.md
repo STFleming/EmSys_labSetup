@@ -57,27 +57,6 @@ Once those have completed then log out and log back in again (remember to have X
 
 ![](imgs/1.png)
 
-The next thing we need to do is get all the ESP32 board information. In the ArduinoIDE goto ```file->preferences``` and in the ```additional boards manager URL``` paste the following: 
-```
-https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-```
-![](imgs/preferences.png)
-
-Then we need to download and install the ESP32 development setup: got to ```Tools->Board->Board Manager...```. In the text box at the top of the pop out window type ESP32, it should appear below and if you hover over it you should be able to click ``install``.
-
-![](imgs/install.png)
-
-It will then download and install the required tools for the ESP32. Once this has finished you can select the correct board by going to:
-```
-Tools->Board->ESP32 Arduino->TinyPico
-```
-------------------------------------------
-
-The final step that we need to do is to setup the __ArduinoWebSockets__ library.
-
-Go to ``Tools -> Manage Libraries`` and in the _Filter your search..._ box type __Arduino Websockets__. You should see it appear in the list, click ``Install``.
-![](imgs/arduino_websockets.png)
-
 -----------------------------------------
 
 And you should now be ready to go!
