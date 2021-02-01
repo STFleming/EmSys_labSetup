@@ -37,6 +37,10 @@ You should see a bash shell prompt, if in this prompt you type ```arduino``` the
 ```
 5. Once you have a bash prompt type ```arduino``` to open the Arduino IDE, and ```pulseview``` to open the Logic Analyser GUI
 
+### FAQ
+* I keep getting ``Unknown cipher type ...``` error? 
+> Make sure that you are using capitals for the ssh flags, i.e. use "-X -C" not "-x -c"
+
 ### Setting up your development environment
 
 Connect via ssh to your designated Linux machine and type the following into the ssh terminal:
