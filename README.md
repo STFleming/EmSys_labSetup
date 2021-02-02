@@ -1,7 +1,9 @@
 # EmSys Setting up your Lab environment 
 
 Working in the EmSys lab requires you to connect to a specific machine in the Linux lab which has the ESP32 and Logic Analyser attached. 
-See this [list](https://github.com/STFleming/EmSys_labSetup/tree/main/allocations) to find out which machine your group has been allocated to. 
+
+
+__See this [list](https://github.com/STFleming/EmSys_labSetup/tree/main/allocations) to find out which machine your group has been allocated to.__ 
 
 ### Connecting to your Linux machine
 
