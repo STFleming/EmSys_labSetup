@@ -17,7 +17,7 @@ Connecting to your allocated machine via ssh is easiest from another Linux machi
     ssh -X -C <USERNAME>@<ALLOCATED MACHINE IP>
 ```
 
-You should see a bash shell prompt, if in this prompt you type ```arduino``` the GUI for the Arduino IDE should load. You can also type ```pulseview``` in this prompt to load the Logic Analyser GUI.
+You should now have a bash shell on one of the Linux machines, type ```pulseview``` to launch the logic analyser waveform viewer to test it out.
 
 ### Connecting via Windows using VcXsrv
 TODO: adding this today
@@ -31,7 +31,7 @@ TODO: adding this today
 6. Make sure that the connection type is set to SSH
 7. Enable X11 forwarding (Connection > SSH > X11)
 8. Log in using your username and password (Should have been assigned to your from COSIT)
-9. You should now have a bash shell on one of the Linux machines, type ```arduino``` to launch the Ardunio IDE or ```pulseview``` to launch the logic analyser waveform viewer.
+9. You should now have a bash shell on one of the Linux machines, type ```pulseview``` to launch the logic analyser waveform viewer to test it out.
 
 ### Connecting via Mac [[adapted from](https://uisapp2.iu.edu/confluence-prd/pages/viewpage.action?pageId=280461906)]
 1. Install [XQuartz](http://xquartz.macosforge.org/) on your Mac, this is the official XServer for Mac
@@ -41,7 +41,7 @@ TODO: adding this today
 ``` 
     ssh -X -C <USERNAME>@<ALLOCATED MACHINE IP>
 ```
-5. Once you have a bash prompt type ```arduino``` to open the Arduino IDE, and ```pulseview``` to open the Logic Analyser GUI
+5. You should now have a bash shell on one of the Linux machines, type ```pulseview``` to launch the logic analyser waveform viewer to test it out.
 
 ## Setting up your development environment
 
