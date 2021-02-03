@@ -19,7 +19,10 @@ Connecting to your allocated machine via ssh is easiest from another Linux machi
 
 You should see a bash shell prompt, if in this prompt you type ```arduino``` the GUI for the Arduino IDE should load. You can also type ```pulseview``` in this prompt to load the Logic Analyser GUI.
 
-### Connecting via Windows [[adapted from](https://uisapp2.iu.edu/confluence-prd/pages/viewpage.action?pageId=280461906)]
+### Connecting via Windows using VcXsrv
+TODO: adding this today
+
+### Connecting via Windows with XMing [[adapted from](https://uisapp2.iu.edu/confluence-prd/pages/viewpage.action?pageId=280461906)]
 1. Install the [Xming](http://sourceforge.net/projects/xming/) software
 2. Download [Putty.exe](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe) from the [PuTTY site](http://www.chiark.greenend.org.uk/~sgtatham/putty/).
 3. Run Xming on your windows machine to start your local XServer.
