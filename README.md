@@ -19,9 +19,6 @@ Connecting to your allocated machine via ssh is easiest from another Linux machi
 
 You should now have a bash shell on one of the Linux machines, type ```pulseview``` to launch the logic analyser waveform viewer to test it out.
 
-### Connecting via Windows using VcXsrv
-TODO: adding this today
-
 ### Connecting via Windows with XMing [[adapted from](https://uisapp2.iu.edu/confluence-prd/pages/viewpage.action?pageId=280461906)]
 1. Install the [Xming](http://sourceforge.net/projects/xming/) software
 2. Download [Putty.exe](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe) from the [PuTTY site](http://www.chiark.greenend.org.uk/~sgtatham/putty/).
