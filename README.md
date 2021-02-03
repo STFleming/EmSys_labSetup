@@ -48,7 +48,7 @@ TODO: adding this today
 Connect via ssh to your designated Linux machine and type the following into the ssh terminal:
 1. clone the setup repository
 ```
-git clone git@github.com:STFleming/EmSys_labSetup.git
+git clone https://github.com/STFleming/EmSys_labSetup.git 
 ```
 2. Navigate into the EmSys_labSetup directory
 ```
