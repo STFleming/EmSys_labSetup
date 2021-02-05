@@ -32,7 +32,6 @@ echo -e "    always_export_binaries: false" >> arduino-cli.yaml
 
 cp arduino-cli.yaml ~/.arduino15/arduino-cli.yaml 
 ./arduino-cli core update-index
-./arduino-cli core install arduino:avr
 ./arduino-cli core install esp32:esp32
 
 ./arduino-cli compile --fqbn esp32:esp32:tinypico Blink
