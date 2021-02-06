@@ -22,50 +22,16 @@ __Guide for Windows__
 
 1. In the ``Host Name (or IP address)`` put the address of your groups allocated machine.
 
-## Cleaning your previous environment
+### Development environment setup
 
-The first thing that we need to do is to cleanup all stuff that was left 
-
-1. connect via ssh to your machine ```ssh <YOUR STUDENT ID>@<ALLOCATED MACHINE>```
-2. Execute the following in the shell
-```
-        rm -rf ~/.arduino15
-```
-3. Execute the following in the shell
-```
-        rm -rf ~/Arduino
-```
-4. Execute the following in the shell
-```
-        rm -rf ~/Arduino
-```
-
-
-## Setting up your development environment
-
-Connect via ssh to your designated Linux machine and type the following into the ssh terminal:
-1. clone the setup repository
-```
-git clone https://github.com/STFleming/EmSys_labSetup.git 
-```
-2. Navigate into the EmSys_labSetup directory
-```
-cd EmSys_labSetup
-```
-3. run the setup script -- will take a few minutes so have a cup of tea
-```
-./setup.sh
-```
-
-Once those have completed then log out and log back in again (remember to have X-fowarding on when you log back in -X -C). To test out your environment type in ```arduino```. The Arduino IDE should load and look like the following.
-
-![](imgs/1.png)
-
-Make sure you can select the correct board in the Arduino IDE. Go to:
+The following command will clean up the mess from the last lab and should fully setup your environment.
+Copy and paste in to your ssh terminal and execute it.
 
 ```
-Tools -> Boards -> ESP32 Arduino -> TinyPico
+curl -o- https://raw.githubusercontent.com/STFleming/EmSys_labSetup/main/setup.sh | bash -
+
 ```
+
 
 -----------------------------------------
 
