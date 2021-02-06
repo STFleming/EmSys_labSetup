@@ -16,19 +16,26 @@ mv arduino-cli_nightly-latest_Linux_64bit.tar.gz ~/EmSys/
 cd EmSys
 tar -xvf arduino-cli_nightly-latest_Linux_64bit.tar.gz
 
-# Make Blink.ino
-mkdir -p ~/EmSys/Blink
+# Make Init.ino
+mkdir -p ~/EmSys/Init
 
-echo -e "const int pin = 14;" > ~/EmSys/Blink/Blink.ino
-echo -e "void setup() {" >> ~/EmSys/Blink/Blink.ino
-echo -e " pinMode(pin, OUTPUT); " >> ~/EmSys/Blink/Blink.ino
-echo -e "} " >> ~/EmSys/Blink/Blink.ino
-echo -e "void loop() {" >> ~/EmSys/Blink/Blink.ino
-echo -e " digitalWrite(pin, HIGH);" >> ~/EmSys/Blink/Blink.ino
-echo -e " delay(1000);" >> ~/EmSys/Blink/Blink.ino
-echo -e " digitalWrite(pin, LOW);" >> ~/EmSys/Blink/Blink.ino
-echo -e " delay(1000);" >> ~/EmSys/Blink/Blink.ino
-echo -e "}" >> ~/EmSys/Blink/Blink.ino
+echo -e "#include <ArduinoWebsockets.h>" > ~/EmSys/Init/Init.ino
+echo -e "#include <Wifi.h>" > ~/EmSys/Init/Init.ino
+echo -e "const char* ssid = \"NETGEAR35\";" > ~/EmSys/Init/Init.ino
+echo -e "const char* password = \"magicalfinch482\"; " > ~/EmSys/Init/Init.ino
+echo -e "using namespace websockets; " > ~/EmSys/Init/Init.ino
+echo -e "void setup() {" >> ~/EmSys/Init/Init.ino
+echo -e "     WiFi.begin(ssid, password); " >> ~/EmSys/Init/Init.ino
+echo -e "    for(int i = 0; i < 10 && WiFi.status() != WL_CONNECTED; i++) {" >> ~/EmSys/Init/Init.ino
+echo -e "        delay(1000);" >> ~/EmSys/Init/Init.ino
+echo -e "    }" >> ~/EmSys/Init/Init.ino
+echo -e "    client.connect(\"ws://192.168.1.2:1234\");" >> ~/EmSys/Init/Init.ino
+echo -e "    client.send(\"Device has been configured\n\");" >> ~/EmSys/Init/Init.ino
+echo -e "} " >> ~/EmSys/Init/Init.ino
+echo -e "void loop() {" >> ~/EmSys/Init/Init.ino
+echo -e "}" >> ~/EmSys/Init/Init.ino
+
+echo -e "" >> ~/EmSys/Init/Init.ino
 
 # copy over the config file into the users home directory
 mkdir -p ~/.arduino15/
@@ -58,10 +65,14 @@ cp arduino-cli.yaml ~/.arduino15/arduino-cli.yaml
 ./arduino-cli core update-index
 ./arduino-cli core install esp32:esp32
 
-./arduino-cli compile --fqbn esp32:esp32:tinypico Blink
-./arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:tinypico Blink 
+# Getting the ArduinoWebsockets
+wget https://github.com/gilmaimon/ArduinoWebsockets/archive/0.5.0.zip
+./arduino-cli lib install --zip-path ~/EmSys/0.5.0.zip
+
+./arduino-cli compile --fqbn esp32:esp32:tinypico Init
+./arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:tinypico Init 
 
 # Append commands to the bashrc
-echo -e "alias emsys_compile="~/EmSys/arduino-cli upload" >> ~/.bashrc
-echo -e "alias emsys_upload="~/EmSys/arduino-cli upload" >> ~/.bashrc
+echo -e "alias emsys_compile=\"~/EmSys/arduino-cli compile --fqbn esp32:esp32:tinypico\"" >> ~/.bashrc
+echo -e "alias emsys_upload=\"~/EmSys/arduino-cli upload --fqbn esp32:esp32:tinypico\"" >> ~/.bashrc
 
