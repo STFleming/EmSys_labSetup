@@ -32,13 +32,3 @@ curl -o- https://raw.githubusercontent.com/STFleming/EmSys_labSetup/main/setup.s
 
 ```
 
-
------------------------------------------
-
-And you should now be ready to go!
-
-
-### FAQ
-* I keep getting ``Unknown cipher type ...`` error? 
-> Make sure that you are using capitals for the ssh flags, i.e. use "-X -C" not "-x -c"
-
