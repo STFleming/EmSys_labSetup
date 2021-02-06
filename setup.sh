@@ -66,8 +66,7 @@ cp arduino-cli.yaml ~/.arduino15/arduino-cli.yaml
 ./arduino-cli core install esp32:esp32
 
 # Getting the ArduinoWebsockets
-wget https://github.com/gilmaimon/ArduinoWebsockets/archive/0.5.0.zip
-./arduino-cli lib install --zip-path ~/EmSys/0.5.0.zip
+./arduino-cli lib install ArduinoWebsockets 
 
 ./arduino-cli compile --fqbn esp32:esp32:tinypico Init
 ./arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:tinypico Init 
