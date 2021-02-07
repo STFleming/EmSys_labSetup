@@ -20,17 +20,17 @@ tar -xvf arduino-cli_nightly-latest_Linux_64bit.tar.gz
 mkdir -p ~/EmSys/Init
 
 echo -e "#include <ArduinoWebsockets.h>" > ~/EmSys/Init/Init.ino
-echo -e "#include <Wifi.h>" > ~/EmSys/Init/Init.ino
-echo -e "const char* ssid = \"NETGEAR35\";" > ~/EmSys/Init/Init.ino
-echo -e "const char* password = \"magicalfinch482\"; " > ~/EmSys/Init/Init.ino
-echo -e "using namespace websockets; " > ~/EmSys/Init/Init.ino
+echo -e "#include <Wifi.h>" >> ~/EmSys/Init/Init.ino
+echo -e "const char* ssid = \"NETGEAR35\";" >> ~/EmSys/Init/Init.ino
+echo -e "const char* password = \"magicalfinch482\"; " >> ~/EmSys/Init/Init.ino
+echo -e "using namespace websockets; " >> ~/EmSys/Init/Init.ino
 echo -e "void setup() {" >> ~/EmSys/Init/Init.ino
 echo -e "     WiFi.begin(ssid, password); " >> ~/EmSys/Init/Init.ino
 echo -e "    for(int i = 0; i < 10 && WiFi.status() != WL_CONNECTED; i++) {" >> ~/EmSys/Init/Init.ino
 echo -e "        delay(1000);" >> ~/EmSys/Init/Init.ino
 echo -e "    }" >> ~/EmSys/Init/Init.ino
 echo -e "    client.connect(\"ws://192.168.1.2:1234\");" >> ~/EmSys/Init/Init.ino
-echo -e "    client.send(\"Device has been configured\n\");" >> ~/EmSys/Init/Init.ino
+echo -e "    client.send(\"Device has been configured\");" >> ~/EmSys/Init/Init.ino
 echo -e "} " >> ~/EmSys/Init/Init.ino
 echo -e "void loop() {" >> ~/EmSys/Init/Init.ino
 echo -e "}" >> ~/EmSys/Init/Init.ino
