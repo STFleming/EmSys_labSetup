@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Make sure we are in the users home directory
+cd ~/
+
 # Clear all the old install stuff
 rm -rf ~/.arduino15
 rm -rf ~/Arduino
