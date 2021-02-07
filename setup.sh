@@ -24,6 +24,7 @@ echo -e "#include <WiFi.h>" >> ~/EmSys/Init/Init.ino
 echo -e "const char* ssid = \"NETGEAR35\";" >> ~/EmSys/Init/Init.ino
 echo -e "const char* password = \"magicalfinch482\"; " >> ~/EmSys/Init/Init.ino
 echo -e "using namespace websockets; " >> ~/EmSys/Init/Init.ino
+echo -e "WebsocketsClient client;" >> ~/EmSys/Init/Init.ino
 echo -e "void setup() {" >> ~/EmSys/Init/Init.ino
 echo -e "     WiFi.begin(ssid, password); " >> ~/EmSys/Init/Init.ino
 echo -e "    for(int i = 0; i < 10 && WiFi.status() != WL_CONNECTED; i++) {" >> ~/EmSys/Init/Init.ino
