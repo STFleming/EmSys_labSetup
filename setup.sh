@@ -20,7 +20,7 @@ tar -xvf arduino-cli_nightly-latest_Linux_64bit.tar.gz
 mkdir -p ~/EmSys/Init
 
 echo -e "#include <ArduinoWebsockets.h>" > ~/EmSys/Init/Init.ino
-echo -e "#include <ESP8266Wifi.h>" >> ~/EmSys/Init/Init.ino
+echo -e "#include <Wifi.h>" >> ~/EmSys/Init/Init.ino
 echo -e "const char* ssid = \"NETGEAR35\";" >> ~/EmSys/Init/Init.ino
 echo -e "const char* password = \"magicalfinch482\"; " >> ~/EmSys/Init/Init.ino
 echo -e "using namespace websockets; " >> ~/EmSys/Init/Init.ino
