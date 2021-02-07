@@ -4,11 +4,12 @@ Working in the EmSys lab requires you to connect to a specific machine in the Li
 
 __See this [list](https://github.com/STFleming/EmSys_labSetup/tree/main/allocations) to find out which machine your group has been allocated to.__ 
 
-There are three parts to this guide:
+There are five parts to this guide:
 1. Connecting to your Lab Machine (Windows/Linux/Mac)
 2. Setting up your environment
-3. Transfering, compiling, and uploading your first TinyPico program 
-4. Looking at the serial output of your TinyPico device
+3. Transfering a sketch from your machine to your Linux lab machine 
+4. Compiling and uploading your first TinyPico program 
+5. Looking at the serial output of your TinyPico device
 
 Each step must be completed in order.
 
@@ -22,7 +23,7 @@ Below is a list of video guides for connecting to your device on various platfor
 |----------|--------------------------|
 | Windows  | [video](www.youtube.com) |
 | Mac      | [video](www.youtube.com) |
-| Linux    | [video](www.youtube.com) |
+| Linux    | [video](https://youtu.be/J5JkNLIkNDY) |
 
 __Guide for Linux / Mac__
 Open a terminal and type in the following
@@ -41,6 +42,8 @@ __Guide for Windows__
 ------------------------------
 
 ## Development environment setup
+
+[[Video on setting up your development environment](https://youtu.be/ucdD1zjaWeg)]
 
 Copy and paste the following command into your ssh terminal and execute it (hit enter).
 
@@ -61,4 +64,22 @@ You should see a message printed that your username has successfully configured 
 
 ![](imgs/message_on_virtual_lab.png)
 
+*Note: this last step where you see the message on the virtual lab-server isn't the most reliable, so don't panic if it doesn't show up*
 
+--------------------------------
+
+## Transfering a sketch from your machine to your Linux lab machine 
+
+Unless you are comfortable with command-line based text editors, such as vim, my advice would be to edit your TinyPico programs on your home machine and transport the relevant files across to the Linux lab machines.
+
+I have created a video explaining this process for several platforms.
+
+| Platform | Video Guide URL          |
+|----------|--------------------------|
+| Windows  | [video](www.youtube.com) |
+| Mac      | [video](www.youtube.com) |
+| Linux    | [video](https://youtu.be/yt0RVEX1274) |
+
+## Compiling and uploading your first TinyPico program 
+
+[[video guide on how to compile and upload your HelloWorld program to your TinyPico](https://youtu.be/uddiqhSN3Ks)]
