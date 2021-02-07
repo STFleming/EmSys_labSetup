@@ -80,6 +80,44 @@ I have created a video explaining this process for several platforms.
 | Mac      | [video](www.youtube.com) |
 | Linux    | [video](https://youtu.be/yt0RVEX1274) |
 
+---------------------------------------
+
 ## Compiling and uploading your first TinyPico program 
 
 [[video guide on how to compile and upload your HelloWorld program to your TinyPico](https://youtu.be/uddiqhSN3Ks)]
+
+To compile a TinyPico program on one of the EmSys machines type:
+
+```
+        emsys_compile HelloWorld
+```
+
+Where ``HelloWorld/`` is a directory containing the TinyPico program ``HelloWorld.ino``.
+
+To upload a program to your TinyPico type:
+
+```
+        emsys_upload -p /dev/ttyUSB0 HelloWorld
+```
+
+Where ``HelloWorld/`` is a directory containing the TinyPico program ``HelloWorld.ino``;
+and ``/dev/ttyUSB0`` is the port that your TinyPico is connected to.
+
+Most of the time leaving ``/dev/ttyUSB0`` should be fine. However, if this upload fails type ``ls /dev`` to see how many ``ttyUSB*`` devices you can see. Try uploading to each of them. If they all fail, or you cannot see any, call for help.
+
+----------------------------------------
+
+## Looking at the serial output of your TinyPico device
+
+[[video guide on how to examine the serial output of your TinyPico](https://youtu.be/4D6jT0egP9E)]
+
+To view the serial output type:
+
+```
+        screen /dev/ttyUSB0 115200
+```
+Where ``/dev/ttyUSB0`` is the device you uploaded to (see previous section), and ``115200`` is the baud rate that you set when establishing the serial connection (see the video on transferring your code).
+
+You should now see the serial messages appearing on the console screen. To exit screen hit ``control + a`` and then press ``k``. You will then see a question at the bottom of the screen asking if you want to close screen, hit ``y``. 
+
+__Important__: You cannot have ``screen /dev/ttyUSB0`` open and try to upload code to ``/dev/ttyUSB0`` at the same time. You must close the screen connection before you can upload your code.
