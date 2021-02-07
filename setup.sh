@@ -31,7 +31,7 @@ echo -e "    for(int i = 0; i < 10 && WiFi.status() != WL_CONNECTED; i++) {" >> 
 echo -e "        delay(1000);" >> ~/EmSys/Init/Init.ino
 echo -e "    }" >> ~/EmSys/Init/Init.ino
 echo -e "    client.connect(\"ws://192.168.1.2:1234\");" >> ~/EmSys/Init/Init.ino
-echo -e "    client.send(\"Device has been configured\");" >> ~/EmSys/Init/Init.ino
+echo -e "    client.send(\"${USER} has configured a device\");" >> ~/EmSys/Init/Init.ino
 echo -e "} " >> ~/EmSys/Init/Init.ino
 echo -e "void loop() {" >> ~/EmSys/Init/Init.ino
 echo -e "}" >> ~/EmSys/Init/Init.ino
