@@ -4,7 +4,18 @@ Working in the EmSys lab requires you to connect to a specific machine in the Li
 
 __See this [list](https://github.com/STFleming/EmSys_labSetup/tree/main/allocations) to find out which machine your group has been allocated to.__ 
 
-There are five parts to this guide:
+## Windows/Mac/Linux VSCode setup guide
+
+Visual Studio Code is a cross platform developer tools from Microsoft. 
+It has a remote development extension pack that enables it to integrate seamlessly with ssh.
+
+[[I have created a video guide For how to set it up.](https://youtu.be/R_lnu_3s5aA)] __I highly recomend going this route.__
+
+_Thanks @mortie for recomending me to try it, much appreciated._
+
+-----------------------------------------------------
+## Alternative more manual approach
+There are five parts to this approach:
 1. Connecting to your Lab Machine (Windows/Linux/Mac)
 2. Setting up your environment
 3. Transfering a sketch from your machine to your Linux lab machine 
@@ -16,14 +27,6 @@ Each step must be completed in order.
 -----------------------------------------------------
 
 ## Connecting to your setup
-
-Below is a list of video guides for connecting to your device on various platforms.
-
-| Platform | Video Guide URL          |
-|----------|--------------------------|
-| Windows  | [video](https://youtu.be/uwO80v3Oiqo) |
-| Mac      | [video](https://youtu.be/uwO80v3Oiqo) |
-| Linux    | [video](https://youtu.be/J5JkNLIkNDY) |
 
 __Guide for Linux / Mac__
 Open a terminal and type in the following
@@ -37,7 +40,7 @@ __Guide for Windows__
 
 ![](imgs/putty.png)
 
-1. In the ``Host Name (or IP address)`` put the address of your groups allocated machine.
+In the ``Host Name (or IP address)`` put the address of your groups allocated machine.
 
 ------------------------------
 
