@@ -1,4 +1,4 @@
-# EmSys Setting up your Lab environment (Take 2) 
+# EmSys setting up your lab environment (Take 2) 
 
 Working in the EmSys lab requires you to connect to a specific machine in the Linux lab which has the ESP32 and Logic Analyser attached. 
 
@@ -21,8 +21,8 @@ Below is a list of video guides for connecting to your device on various platfor
 
 | Platform | Video Guide URL          |
 |----------|--------------------------|
-| Windows  | [video](www.youtube.com) |
-| Mac      | [video](www.youtube.com) |
+| Windows  | [video](https://youtu.be/uwO80v3Oiqo) |
+| Mac      | [video](https://youtu.be/uwO80v3Oiqo) |
 | Linux    | [video](https://youtu.be/J5JkNLIkNDY) |
 
 __Guide for Linux / Mac__
