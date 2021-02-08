@@ -5,11 +5,12 @@ Working in the EmSys lab requires you to connect to a specific machine in the Li
 __See this [list](https://github.com/STFleming/EmSys_labSetup/tree/main/allocations) to find out which machine your group has been allocated to.__ 
 
 ## Windows/Mac/Linux VSCode setup guide
+__I highly recomend going this route.__
 
-Visual Studio Code is a cross platform developer tools from Microsoft. 
-It has a remote development extension pack that enables it to integrate seamlessly with ssh.
+[[Visual Studio Code](https://code.visualstudio.com/download)] is a cross platform developer tools from Microsoft. 
+It has a [[remote development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)] that enables it to integrate seamlessly with ssh.
 
-[[I have created a video guide For how to set it up.](https://youtu.be/R_lnu_3s5aA)] __I highly recomend going this route.__
+[[I have created a video guide explaining how to set it up and compile a HelloWorld program for your TinyPico.](https://youtu.be/R_lnu_3s5aA)] 
 
 _Thanks @mortie for recomending me to try it, much appreciated._
 
