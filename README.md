@@ -76,13 +76,9 @@ You should see a message printed that your username has successfully configured 
 
 Unless you are comfortable with command-line based text editors, such as vim, my advice would be to edit your TinyPico programs on your home machine and transport the relevant files across to the Linux lab machines.
 
-I have created a video explaining this process for several platforms.
+[[video guide for linux](https://youtu.be/yt0RVEX1274)]
 
-| Platform | Video Guide URL          |
-|----------|--------------------------|
-| Windows  | [video](www.youtube.com) |
-| Mac      | [video](www.youtube.com) |
-| Linux    | [video](https://youtu.be/yt0RVEX1274) |
+__For Windows/Mac I recomend using the VSCode approach at the top of this page__
 
 ---------------------------------------
 
