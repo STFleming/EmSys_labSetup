@@ -10,3 +10,6 @@ rm -rf ~/EmSys/arduino-cli_nightly-latest_Linux_64bit.tar.gz
 rm -rf ~/.local/share/Trash/files/*
 rm -rf ~/.cache/*
 echo "Cleanup complete"
+
+echo "Clearing any blocked ports...'
+kill -9 $(ps aux | awk '/ttyUSB0/ && ! /arduino-cli/ {print $2}') &> /dev/null
