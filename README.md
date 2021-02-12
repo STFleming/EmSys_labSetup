@@ -62,14 +62,6 @@ If successful the output should look like the image below, showing that a progra
 
 ![](imgs/setup_success.png)
 
-Then navigate to the EmSys virtual labpage: [http://ec2-3-12-197-132.us-east-2.compute.amazonaws.com:4000/](http://ec2-3-12-197-132.us-east-2.compute.amazonaws.com:4000/)
-
-You should see a message printed that your username has successfully configured a device. This means that your device was programmed and was able to connect to the wider network in the lab.
-
-![](imgs/message_on_virtual_lab.png)
-
-*Note: this last step where you see the message on the virtual lab-server isn't the most reliable, so don't panic if it doesn't show up*
-
 --------------------------------
 
 ## Transfering a sketch from your machine to your Linux lab machine 
