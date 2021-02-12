@@ -6,7 +6,7 @@ cd ~/
 # Clear all the old install stuff
 rm -rf ~/.arduino15
 rm -rf ~/Arduino
-rm -rf ./EmSys_LabSetup
+rm -rf ./EmSys_labSetup
 
 # Make the EmSys directory
 mkdir -p ~/EmSys/
@@ -18,6 +18,7 @@ mv arduino-cli_nightly-latest_Linux_64bit.tar.gz ~/EmSys/
 # unpack
 cd EmSys
 tar -xvf arduino-cli_nightly-latest_Linux_64bit.tar.gz
+rm -rf arduino-cli_nightly-latest_Linux_64bit.tar.gz
 
 # Make Init.ino
 mkdir -p ~/EmSys/Init
@@ -79,3 +80,4 @@ cp arduino-cli.yaml ~/.arduino15/arduino-cli.yaml
 echo -e "alias emsys_compile=\"~/EmSys/arduino-cli compile --fqbn esp32:esp32:tinypico\"" >> ~/.bashrc
 echo -e "alias emsys_upload=\"~/EmSys/arduino-cli upload --fqbn esp32:esp32:tinypico\"" >> ~/.bashrc
 
+echo "curl -o- https://raw.githubusercontent.com/STFleming/EmSys_labSetup/main/cleanup.sh | bash -" >> ~/.bashrc
