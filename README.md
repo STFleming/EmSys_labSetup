@@ -62,7 +62,7 @@ If successful the output should look like the image below, showing that a progra
 
 ![](imgs/setup_success.png)
 
-Then navigate to the EmSys virtual labpage: [http://ec2-18-222-206-236.us-east-2.compute.amazonaws.com:4000/](http://ec2-18-222-206-236.us-east-2.compute.amazonaws.com:4000/)
+Then navigate to the EmSys virtual labpage: [http://ec2-3-12-197-132.us-east-2.compute.amazonaws.com:4000/](http://ec2-3-12-197-132.us-east-2.compute.amazonaws.com:4000/)
 
 You should see a message printed that your username has successfully configured a device. This means that your device was programmed and was able to connect to the wider network in the lab.
 
