@@ -13,3 +13,8 @@ echo "Cleanup complete"
 
 echo "Clearing any blocked ports..."
 kill -9 $(ps aux | awk '/ttyUSB0/ && ! /arduino-cli/ {print $2}') &> /dev/null
+
+
+echo "getting latest LetESP32.h..."
+mkdir -p ~/Arduino/libraries/LetESP32
+wget https://github.com/STFleming/EmSys_Lab2/blob/main/let-esp32/LetESP32.h -P ~/Arduino/libraries/LetESP32/
