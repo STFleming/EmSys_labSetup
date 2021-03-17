@@ -22,7 +22,7 @@ wget https://raw.githubusercontent.com/STFleming/EmSys_Lab2/main/let-esp32/LetES
 # Installing the DallasTemperature Library
 mkdir -p ~/Arduino/libraries/DallasTemperature
 if [ ! -f "~/Arduino/libraries/DallasTemperature/DallasTemperature.cpp" ]; then
-        wget https://raw.githubusercontent.com/STFleming/EmSys_Lab3/main/libs/DallasTemperature/DallasTemperature.cpp -P ~/Arduino/libraries/DallasTemperature/DallasTemperature.cpp
+        wget https://raw.githubusercontent.com/STFleming/EmSys_Lab3/main/libs/DallasTemperature/DallasTemperature.cpp -P ~/Arduino/libraries/DallasTemperature/
 fi
 
 if [ ! -f "~/Arduino/libraries/DallasTemperature/DallasTemperature.h" ]; then
