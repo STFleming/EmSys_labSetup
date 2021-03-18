@@ -19,6 +19,10 @@ rm -rf ~/Arduino/libraries/LetESP32/LetESP32.h
 mkdir -p ~/Arduino/libraries/LetESP32
 wget https://raw.githubusercontent.com/STFleming/EmSys_Lab3/main/libs/LetESP32/LetESP32.h -P ~/Arduino/libraries/LetESP32/
 
+## Cleaning up (ToDo: MAKE THIS BETTER)
+rm -rf ~/Arduino/libraries/OneWire
+rm -rf ~/Arduino/libraries/DallasTemperature
+
 # Installing the DallasTemperature Library
 mkdir -p ~/Arduino/libraries/DallasTemperature
 if [ ! -f "~/Arduino/libraries/DallasTemperature/DallasTemperature.cpp" ]; then
