@@ -1,115 +1,35 @@
-# EmSys setting up your lab environment (Take 2) 
+# EmSys setting up your lab environment  
 
-Working in the EmSys lab requires you to connect to a specific machine in the Linux lab which has the ESP32 and Logic Analyser attached. 
+This guide will explain how to setup your local development environment for CSC368/M68.
+It will show you how to install the tools required for the lab assignments, how to configure the hardware, and how to upload and test a simple program.
 
-__See this [list](https://github.com/STFleming/EmSys_labSetup/tree/main/allocations) to find out which machine your group has been allocated to.__ 
+The setup described here _should_ hopefully be avaialble on all the lab machines in the Computational Foundry (both windows and linux). 
+However, as you are allowed to take the hardware home, this page focusses on setting up the environment from scratch on your own machine.
+It will mainly consist of videos showing you want to do, and will support the following platforms:
 
-## Windows/Mac/Linux VSCode setup guide
-__I highly recomend going this route.__
+* Windows 10
+* Mac OS-X (M1)
+* Ubuntu 20.04
 
-[[Visual Studio Code](https://code.visualstudio.com/download)] is a cross platform developer tools from Microsoft. 
-It has a [[remote development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)] that enables it to integrate seamlessly with ssh.
-
-[[I have created a video guide explaining how to set it up and compile a HelloWorld program for your TinyPico.](https://youtu.be/R_lnu_3s5aA)] 
-
-_Thanks @mortie for recomending me to try it, much appreciated._
-
------------------------------------------------------
-## Alternative more manual approach
-There are five parts to this approach:
-1. Connecting to your Lab Machine (Windows/Linux/Mac)
-2. Setting up your environment
-3. Transfering a sketch from your machine to your Linux lab machine 
-4. Compiling and uploading your first TinyPico program 
-5. Looking at the serial output of your TinyPico device
-
-Each step must be completed in order.
-
------------------------------------------------------
-
-## Connecting to your setup
-
-__Guide for Linux / Mac__
-Open a terminal and type in the following
-``` 
-        ssh <YOUR STUDENT ID>@<ALLOCATED MACHINE>
-```
-
-You will be presented with a bash shell running on your Linux machine.
-
-__Guide for Windows__
-
-![](imgs/putty.png)
-
-In the ``Host Name (or IP address)`` put the address of your groups allocated machine.
-
-------------------------------
-
-## Development environment setup
-
-[[Video on setting up your development environment](https://youtu.be/ucdD1zjaWeg)]
-
-Copy and paste the following command into your ssh terminal and execute it (hit enter).
-
-__WARNING__: This command attempts to clean up some of the mess created by the last lab, you should ensure than any code you wrote in the previous lab session is backed up. In particular this script will remove the following folders in your Linux home directory: ``~/Arduino``, ``~/.arduino15``, ``~/EmSys_labSetup``.  
+For different Linux distributions, I will try to help you set up as best I can, but there is limited support for some of the toolchains. 
 
 
-```
-curl -o- https://raw.githubusercontent.com/STFleming/EmSys_labSetup/main/setup.sh | bash -
+## EmSys lab kit pack
 
-```
-If successful the output should look like the image below, showing that a program has been successfully written into the flash memory of the TinyPico, and that the device has been reset.
+In your lab kit you should have the following:
+* A TinyPico microcontroller
+* A AZ-Delivery logic analyser
+* A set of female-to-female multicoloured dupont cables
+* A microusb cable: to connect to the TinyPico
+* A mini USB cable: to connect to the logic analyser
 
-![](imgs/setup_success.png)
+If you do not have any of these items, please ask Shane or a demonstrator during one of the lab sessions.
 
---------------------------------
+## Installing Arduino and ESP32 Libraries
+We will use the Arduino IDE for programming the TinyPico ESP32 microcontroller. Please watch the following video explaining how to download and install the Arduino IDE.
 
-## Transfering a sketch from your machine to your Linux lab machine 
+* [[Mac](https://www.youtube.com/watch?v=Cwf1qgi3TmE)]
 
-Unless you are comfortable with command-line based text editors, such as vim, my advice would be to edit your TinyPico programs on your home machine and transport the relevant files across to the Linux lab machines.
+If you are comfortable with the command-line then I'd recommend downloading and installing ```arduino-cli``` for compilation and uploading to your TinyPico from the command line. However, these tutorials will not demonstrate this.
 
-[[video guide for linux](https://youtu.be/yt0RVEX1274)]
 
-__For Windows/Mac I recomend using the VSCode approach at the top of this page__
-
----------------------------------------
-
-## Compiling and uploading your first TinyPico program 
-
-[[video guide on how to compile and upload your HelloWorld program to your TinyPico](https://youtu.be/uddiqhSN3Ks)]
-
-To compile a TinyPico program on one of the EmSys machines type:
-
-```
-        emsys_compile HelloWorld
-```
-
-Where ``HelloWorld/`` is a directory containing the TinyPico program ``HelloWorld.ino``.
-
-To upload a program to your TinyPico type:
-
-```
-        emsys_upload -p /dev/ttyUSB0 HelloWorld
-```
-
-Where ``HelloWorld/`` is a directory containing the TinyPico program ``HelloWorld.ino``;
-and ``/dev/ttyUSB0`` is the port that your TinyPico is connected to.
-
-Most of the time leaving ``/dev/ttyUSB0`` should be fine. However, if this upload fails type ``ls /dev`` to see how many ``ttyUSB*`` devices you can see. Try uploading to each of them. If they all fail, or you cannot see any, call for help.
-
-----------------------------------------
-
-## Looking at the serial output of your TinyPico device
-
-[[video guide on how to examine the serial output of your TinyPico](https://youtu.be/4D6jT0egP9E)]
-
-To view the serial output type:
-
-```
-        screen /dev/ttyUSB0 115200
-```
-Where ``/dev/ttyUSB0`` is the device you uploaded to (see previous section), and ``115200`` is the baud rate that you set when establishing the serial connection (see the video on transferring your code).
-
-You should now see the serial messages appearing on the console screen. To exit screen hit ``control + a`` and then press ``k``. You will then see a question at the bottom of the screen asking if you want to close screen, hit ``y``. 
-
-__Important__: You cannot have ``screen /dev/ttyUSB0`` open and try to upload code to ``/dev/ttyUSB0`` at the same time. You must close the screen connection before you can upload your code.
