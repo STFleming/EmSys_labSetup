@@ -32,4 +32,10 @@ We will use the Arduino IDE for programming the TinyPico ESP32 microcontroller. 
 
 If you are comfortable with the command-line then I'd recommend downloading and installing ```arduino-cli``` for compilation and uploading to your TinyPico from the command line. However, these tutorials will not demonstrate this.
 
+After the Arduino IDE is installed on your home machine the next required step is to set up the libraries required for the ESP32 microcontroller that we are using on the course. The following video shows you how to set this up, and how to compile and upload your first program onto your TinyPico device.  
+
+In the video you will need the following link to get the correct packages: ``https://dl.espressif.com/dl/package_esp32_index.json`` 
+
+* [[Setting up ESP32]()]
+
 
