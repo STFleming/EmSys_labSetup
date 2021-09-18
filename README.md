@@ -8,11 +8,11 @@ However, as you are allowed to take the hardware home, this page focusses on set
 It will mainly consist of videos showing you want to do, and will support the following platforms:
 
 * Windows 10
-* Mac OS-X (M1)
+* Mac OS-X 
 * Ubuntu 20.04
 
-For different Linux distributions, I will try to help you set up as best I can, but there is limited support for some of the toolchains. 
-
+_For different Linux distributions, I will try to help you set up as best I can, but there is limited support for some of the toolchains._ 
+_For M1 Macbooks it is very difficult to get pulseview to install correctly. There are other viewers that work, however, you will not be using the same waveform viewer as everyone else._
 
 ## EmSys lab kit pack
 
@@ -36,6 +36,12 @@ After the Arduino IDE is installed on your home machine the next required step i
 
 In the video you will need the following link to get the correct packages: ``https://dl.espressif.com/dl/package_esp32_index.json`` 
 
-* [[Setting up ESP32]()]
+* [[Setting up ESP32](https://youtu.be/sqFIopuGdtU)]
 
+## Setting up the Logic Analyser
+
+The following videos will show you how to setup the logic analyser and pulseview on your device.
+
+* [[Windows: setting up the logic analyser and PulseView](https://youtu.be/N24Ll0k6jFs)]
+* [[Mac: setting up the logic analyser and PulseView]()]
 
