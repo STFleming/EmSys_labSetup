@@ -50,4 +50,5 @@ The following videos will show you how to setup the logic analyser and pulseview
 
 * [[Windows: setting up the logic analyser and PulseView](https://youtu.be/N24Ll0k6jFs)]
 * [[Mac: setting up the logic analyser and PulseView](https://youtu.be/HceUDBkg8NY)]
+* [Ubuntu: setting up the logic analyser and PulseView](https://youtu.be/3AL-OgFaZD8)]
 
