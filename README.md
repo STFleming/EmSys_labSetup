@@ -26,6 +26,8 @@ In your lab kit you should have the following:
 If you do not have any of these items, please ask Shane or a demonstrator during one of the lab sessions.
 
 ## Installing Arduino and ESP32 Libraries
+__Installing the Arduino IDE__
+
 We will use the Arduino IDE for programming the TinyPico ESP32 microcontroller. Please watch the following video explaining how to download and install the Arduino IDE.
 
 * [[Mac](https://www.youtube.com/watch?v=Cwf1qgi3TmE)]
@@ -33,6 +35,8 @@ We will use the Arduino IDE for programming the TinyPico ESP32 microcontroller. 
 * [[Ubuntu](https://www.youtube.com/watch?v=4sGsVauoOzA)]
 
 If you are comfortable with the command-line then I'd recommend downloading and installing ```arduino-cli``` for compilation and uploading to your TinyPico from the command line. However, these tutorials will not demonstrate this.
+
+__Setting up the Arduino IDE__
 
 After the Arduino IDE is installed on your home machine the next required step is to set up the libraries required for the ESP32 microcontroller that we are using on the course. The following video shows you how to set this up, and how to compile and upload your first program onto your TinyPico device.  
 
@@ -45,5 +49,5 @@ In the video you will need the following link to get the correct packages: ``htt
 The following videos will show you how to setup the logic analyser and pulseview on your device.
 
 * [[Windows: setting up the logic analyser and PulseView](https://youtu.be/N24Ll0k6jFs)]
-* [[Mac: setting up the logic analyser and PulseView]()]
+* [[Mac: setting up the logic analyser and PulseView](https://youtu.be/HceUDBkg8NY)]
 
