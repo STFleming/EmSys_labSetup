@@ -30,6 +30,7 @@ We will use the Arduino IDE for programming the TinyPico ESP32 microcontroller. 
 
 * [[Mac](https://www.youtube.com/watch?v=Cwf1qgi3TmE)]
 * [[Windows](https://www.youtube.com/watch?v=3vIt7LYLXhE)]
+* [[Ubuntu](https://www.youtube.com/watch?v=4sGsVauoOzA)]
 
 If you are comfortable with the command-line then I'd recommend downloading and installing ```arduino-cli``` for compilation and uploading to your TinyPico from the command line. However, these tutorials will not demonstrate this.
 
